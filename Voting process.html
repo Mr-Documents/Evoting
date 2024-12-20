@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./footerandstuffs.css">
+
+<style>
+    .thank-you-animation {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .thank-you-animation::before {
+      content: "Thank You!";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 48px;
+      font-weight: bold;
+      color: #333;
+      animation: thank-you 2s infinite;
+    }
+    
+    @keyframes thank-you {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+    }
+
+body  {
+    font-family: Arial, sans-serif;
+    background-color: #ece6e6;
+}
+
+.containerP {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.containerVP {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border: 0px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.containerGS {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border: 0px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.containerFO {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border: 0px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.containerPR {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border: 0px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.containerOR {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border: 0px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.containerW {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border: 0px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+select {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+button[type="submit"] {
+    width: 100%;
+    height: 40px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.progress-container {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 1s ease-in-out;
+}
+
+.progress-fill {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    animation: wave 2s infinite ease-in-out;
+}
+
+#submitbutton{
+    text-decoration: none;
+    color: #000000;
+    border: 1px solid black;
+    padding: 8px;
+    margin-top: 20%;
+    top :50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+</style>
+</head>
+<body style="background-color: aquamarine;" >
+    <center><progress></progress></center>
+    
+    <div class="containerP">
+        <h2>PRESIDENT</h2>
+        <form id="voting-form" name="frm1">
+            <label for="candidate">Select Candidate:</label>
+            <select id="candidate" name="candidates1">
+                <option value="candidate1">Select</option><b>
+                <option value="candidate2" id="fr">Rodolphe Francis</option>
+                <option value="candidate3">Ellen Appiah</option></b>
+            </select>
+            
+            
+
+             <div class="containerVP">
+                    <h2>VICE PRESIDENT</h2>
+                    <form id="voting-form" name="frm2">
+                        <label for="candidate">Select Candidate:</label>
+                        <select id="candidate" name="candidates2">
+                            <option value="candidate1">Select</option><b>
+                            <option value="candidate2">Ebenezer Amoah</option>
+                            <option value="candidate3">Dickson Emmanuel</option></b>
+                        </select><br>
+                        
+                        
+
+             <div class="containerGS">
+                    <h2>GEN. SECRETARY</h2>
+                    <form id="voting-form" name="frm3">
+                        <label for="candidate">Select Candidate:</label>
+                        <select id="candidate" name="candidates3"><b>
+                            <option value="candidate1">Select</option>
+                            <option value="candidate1">Benedicta O. Amoah</option>
+                            <option value="candidate2">Emmanuella Owusu</option></b>
+                        </select><br>
+                       
+                        
+
+             <div class="containerFO">
+                    <h2>FINANCIAL OFFICER</h2>
+                    <form id="voting-form" name="frm4">
+                        <label for="candidate">Select Candidate:</label>
+                        <select id="candidate" name="candidates4">
+                            <option value="candidate1">Issah Ali</option>
+                            <input type="checkbox"> Yes
+                            <input type="checkbox"> No
+                        </select><br>
+                      
+                        
+             <div class="containerPR">
+                    <h2>P R O</h2>
+                    <form id="voting-form" name="frm5">
+                        <label for="candidate">Select Candidate:</label>
+                        <select id="candidate" name="candidates5">
+                            <option value="candidate1">select</option><b>
+                                <option value="candidate2">Grace Mensah</option>
+                            <option value="candidate2">Opoku Isaac</option>
+                            <option value="candidate3">Nana Agyei</option></b>
+                        </select><br>
+                       
+                        
+
+             <div class="containerOR">
+                    <h2>ORGANIZER</h2>
+                    <form id="voting-form" name="frm6">
+                        <label for="candidate">Select Candidate:</label>
+                        <select id="candidate" name="candidates6">
+                            <option value="candidate1">select</option><b>
+                            <option value="candidate1">Kingsley Oteng</option>
+                            <option value="candidate2">Roger Amoah</option></b>
+                        </select><br><br>
+                        
+                       
+                        
+            
+             <div class="containerW">
+                    <h2>WOCOM</h2>
+                    <form id="voting-form" name="frm7">
+                        <label for="candidate">Select Candidate:</label>
+                        <select id="candidate" name="candidates7">
+                            <option value="candidate1">Select</option><b>
+                            <option value="candidate2">Halimatu S. Adam</option>
+                            <option value="candidate3">Amanda Arthur</option></b>
+                        </select><br><br>
+                       
+                        
+   
+             
+          
+                        
+             
+                                
+                               </div>
+                               <a id="submitbutton"href="./confirmationand.html"> Submit</a>
+                               </form>
+                            </div>
+                            </form>
+                            </div>
+                            </form>
+                            </div>
+                            </form>
+                            </div>
+                            </form>
+                            </div>
+                            </form>
+                            </div>
+                            </div>
+                            </div>
+                            </form>
+                            </div>
+                            </form>
+                            </div>
+                            </form>
+                            </div>
+                            </form>
+                            </div>
+                            </form>
+                            </div>
+                            </form>
+                            </div>
+                            </form>
+                            </div>
+                            
+
+                                         
+                                      
+                                                    
+                                         
+                                    </form>
+        
+    
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 My Website. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+    <script src="voting.js"></script>
+</body>
+</html>
